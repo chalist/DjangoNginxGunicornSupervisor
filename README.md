@@ -9,7 +9,7 @@ $ pip install Gunicorn
 
 #### Install [Supervisor](http://supervisord.org)
 ```
-sudo apt-get install supervisor
+$ sudo apt-get install supervisor
 ```
 
 
