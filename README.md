@@ -4,7 +4,7 @@ Deploy Django with Gunicorn + Nginx + Supervisor
 #### Install [Gunicorn](http://gunicorn.org/)
 
 ```
-pip install Gunicorn
+$ pip install Gunicorn
 ```
 
 #### Install [Supervisor](http://supervisord.org)
@@ -81,7 +81,7 @@ $ sudo systemctl restart nginx.service
 
 And run `collectstatic` for static files serving:
 ```
-python manage.py collectstatic
+$ python manage.py collectstatic
 ```
 
 
