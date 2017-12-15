@@ -43,7 +43,12 @@ $ sudo supervisorctl update
 ```
 
 #### Nginx config
+Remove default config:
 
+```
+$ sudo rm -f /etc/nginx/site-available/default /etc/nginx/site-enabled/default
+```
+And create your config:
 ```
 $ sudo vim /etc/nginx/sites-available/mysite.conf
 ```
