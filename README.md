@@ -23,7 +23,7 @@ and add below lines:
 
 ```
 [program:web]
-command=/home/mysite/.virtualenvs/mysite/bin/gunicorn <Project>.wsgi --bind 127.0.0.1:8000
+command=/home/mysite/.virtualenvs/mysite/bin/gunicorn <Project>.wsgi --bind 127.0.0.1:8000 --access-logfile /home/mysite/log/guni_access.log --error-logfile /home/mysite/log/guni_errors.log --workers 4 --timeout=600 --graceful-timeout=10 --log-level=DEBUG --capture-output
 autostart=true
 autorestart=true
 stopasgroup=true
