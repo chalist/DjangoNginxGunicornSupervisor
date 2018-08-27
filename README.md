@@ -79,6 +79,10 @@ server {
   }
 }
 ```
+Add config symbol link in nginx's site-enabled:
+```
+$ sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/mysite.conf
+```
 Restart nginx:
 ```
 $ sudo systemctl restart nginx.service
