@@ -22,17 +22,27 @@ $ sudo vim /etc/supervisor/conf.d/mysite.conf
 and add below lines:
 
 ```
-[program:web]
-command=/home/mysite/.virtualenvs/mysite/bin/gunicorn <Project>.wsgi --bind 127.0.0.1:8000 --access-logfile /home/mysite/log/guni_access.log --error-logfile /home/mysite/log/guni_errors.log --workers 4 --timeout=600 --graceful-timeout=10 --log-level=DEBUG --capture-output
+[program:mysite]
+command=/home/mysite/.virtualenvs/mysite/bin/gunicorn mysite.wsgi \
+    --bind 0.0.0.0:8000 \
+    --access-logfile /home/mysite/log/guni_access.log \
+    --error-logfile /home/mysite/log/guni_errors.log \
+    --workers 4 \
+    --timeout=600 \
+    --graceful-timeout=10 \
+    --log-level=DEBUG \
+    --capture-output
+
 autostart=true
 autorestart=true
 stopasgroup=true
 killasgroup=true
 user=mysite
-directory=/home/mysite/www/
-stdout_logfile=/var/log/mysite.log
-stderr_logfile=/var/log/mysite.log
+directory=/home/mysite/mysite/
+stdout_logfile=/home/mysite/log/mysite.log
+stderr_logfile=/home/mysite/log/mysite.log
 redirect_stderr=true
+
 
 ```
 
