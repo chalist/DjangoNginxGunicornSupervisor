@@ -70,11 +70,11 @@ server {
 
   location /static/ {
     autoindex on;
-    alias /home/mysite/www/static/;
+    alias /home/mysite/mysite/static/;
   }
 
   location /media/ {
-    alias /home/mysite/www/media/;
+    alias /home/mysite/mysite/media/;
   }
 
   location / {
