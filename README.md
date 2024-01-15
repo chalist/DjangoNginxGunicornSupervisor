@@ -88,6 +88,7 @@ server {
     proxy_pass http://127.0.0.1:8000;
   }
 }
+
 ```
 Add config symbol link in nginx's site-enabled:
 ```
